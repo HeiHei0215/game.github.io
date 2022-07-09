@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>
+		猜拳好好玩
+		</title>
+		<script>
+		x=Math.floor(Math.random()*3+1);
+		w=0;
+		p=0;
+		l=0;
+		function sis(){
+			if(x==1){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/inUxsD.png";
+				p++;
+				document.querySelector("#ppp").innerHTML = p;
+			}else if(x==2){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/QRsW9k.png";
+				l++;
+				document.querySelector("#lll").innerHTML = l;
+			}else if(x==3){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/ImasQz.png";
+				w++;
+				document.querySelector("#www").innerHTML = w;
+			}
+			x=Math.floor(Math.random()*3+1);
+		}
+		function sto(){
+			if(x==1){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/2E6S73.png";
+				w++;
+				document.querySelector("#www").innerHTML = w;
+			}else if(x==2){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/sFHruE.png";
+				p++;
+				document.querySelector("#ppp").innerHTML = p;
+			}else if(x==3){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/2C8pIg.png";
+				l++;
+				document.querySelector("#lll").innerHTML = l;
+			}
+			x=Math.floor(Math.random()*3+1);
+		}
+		function poo(){
+			if(x==1){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/DFL0z8.png";
+				l++;
+				document.querySelector("#lll").innerHTML = l;
+			}else if(x==2){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/HuDVw8.png";
+				w++;
+				document.querySelector("#www").innerHTML = w;
+			}else if(x==3){
+				document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/8NW0UA.png";
+				p++;
+				document.querySelector("#ppp").innerHTML = p;
+			}
+			x=Math.floor(Math.random()*3+1);
+		}
+		function res(){
+			document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/DMmeUb.png";
+		}
+		function gone(){
+			w=0;
+			l=0;
+			p=0;
+			document.querySelector("#ppp").innerHTML = p;
+			document.querySelector("#www").innerHTML = w;
+			document.querySelector("#lll").innerHTML = l;
+			document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/DMmeUb.png";
+		}
+		function down(){
+			document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/qje1cL.png";
+		}
+		function undown(){
+			document.querySelector("#ooo").src="https://upload.cc/i1/2022/06/14/DMmeUb.png";
+		}
+		</script>
+	</head>
+	<body bgcolor="#7AFEC6">
+	<center><h1 style="background-color:#006030;color:white">猜拳好好玩</h1></center>
+	<center><img style="cursor: pointer;" onmousedown="down()" onmouseup="undown()" id="ooo" src="https://upload.cc/i1/2022/06/14/DMmeUb.png" width="1200px"></center>
+	<center>
+	<table border="1">
+			<tr>
+				<th>贏了<span id="www">0</span>次</th>
+				<th>輸了<span id="lll">0</span>次</th>
+				<th>平手<span id="ppp">0</span>次</th>
+			</tr>
+	</table>
+	</center>
+	<center>
+	<table border="1">
+			<tr>
+				<th><img id="ss" style="cursor: pointer;" src="https://upload.cc/i1/2022/06/14/1twhPK.png" width="300px" onclick="sis()"></th>
+				<th><img id="oo" style="cursor: pointer;" src="https://upload.cc/i1/2022/06/14/YkMJAo.png" width="300px" onclick="sto()"></th>
+				<th><img id="pp" style="cursor: pointer;" src="https://upload.cc/i1/2022/06/14/StV2X1.png" width="300px" onclick="poo()"></th>
+			</tr>
+		</table>
+		<button style="cursor: pointer;" onclick="res()">再來一局</button>
+		<button style="cursor: pointer;" onclick="gone()">歸零</button>
+		
+		</center>
+		
+	</body>
+</html>
